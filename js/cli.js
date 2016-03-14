@@ -1,7 +1,10 @@
 var wordCount = require(./journal.js).wordCount;
+var prompt = require('prompt');
+prompt.start();
 
-console.log('Journaling automatically!');
-var result = wordCount('This is my journal entery');
-result.forEach(function(element) {
-  console.log(element);
+prompt.get('wordString', function(err, result){
+  var result = wordCount(wordString);
+  result.forEach(function(element) {
+    console.log(element);
+  });
 });
