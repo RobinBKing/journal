@@ -1,5 +1,6 @@
-// describe('template', function() {
-//   it("is true/fals some behavior", function() {
-//     expect(notTriangle(10, 10, 20)).to.equal(true);
-//   });
-// });
+describe('wordCount', function() {
+  it("should return the number of words", function() {
+    var wordString = "This is a bogus test";
+    expect(wordCount(wordString)).to.equal(5);
+  });
+});

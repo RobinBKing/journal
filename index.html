@@ -3,18 +3,23 @@
   <head>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/browser.js"></script>
     <title>Journal</title>
   </head>
   <body>
     <div class="Container">
       <header>
-        <h1></h1>
+        <h1>
+          <input id="title" placeholder="Journal title..." type="text" name="title" value="">
+        </h1>
       </header>
       <main>
         <p>
-
+          Dear Diary,
         </p>
+          <textarea rows="10" cols="50" id="entry" placeholder="Start journaling..."></textarea>
+        <br>
+        <input type="submit" value="Submit">
       </main>
     </div>
   </body>
