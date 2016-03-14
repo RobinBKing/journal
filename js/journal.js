@@ -1,10 +1,13 @@
 //business logic
+var moment = require('moment');
+
 exports.Journal = function() {
   this.entries = [];
 }
-exports.Entry = function(entry) {
+exports.Entry = function(title, entry) {
+  this.title = title;
   this.entry = entry;
-  this.date = "3.14.16";
+  this.date = moment().format('MMMM Do YYYY, h:mm:ss a');
 }
 exports.Entry.prototype.wordCount = function() {
   return this.entry.match(/(\w+)/g).length;

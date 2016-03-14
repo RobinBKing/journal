@@ -1,6 +1,7 @@
 //interface
 var Journal = require('./journal.js').Journal;
 var Entry = require('./journal.js').Entry;
+// var moment = require('moment');
 
 
 
@@ -9,10 +10,8 @@ $(document).ready(function() {
     event.preventDefault();
     var title = $('#title').val();
     var entry = $('#entry').val();
-    var newEntry = new Entry(entry);
-    var newWordCount = newEntry.wordCount();
-    console.log(newWordCount);
-    // $('#wordCounts').append("<li>'Count': " + entryCount + "</li>");
-
+    var newEntry = new Entry(title, entry);
+    // newEntry.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+    $('#wordCounts').append("<li>Journal entry: '" + newEntry.title + "' made on " + newEntry.date + " has " + newEntry.wordCount() + " words.</li>");
   });
 });
