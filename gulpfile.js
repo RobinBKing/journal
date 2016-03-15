@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var jshint = require('gulp-jshint');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
@@ -7,6 +8,12 @@ var utilities = require('gulp-util');
 var buildProduction = utilities.env.production;
 var del = require('del');
 
+
+gulp.task('jshint', function(){
+  return gulp.src(['js/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
 });

@@ -1,10 +1,11 @@
-var wordCount = require(./journal.js).wordCount;
-var prompt = require('prompt');
-prompt.start();
+// var Journal = require('./journal.js').Journal;
+// var Entry = require('./journal.js').Entry;
 
-prompt.get('wordString', function(err, result){
-  var result = wordCount(wordString);
-  result.forEach(function(element) {
-    console.log(element);
-  });
-});
+// prompt.start();
+
+// prompt.get('entry', 'title', function(err, entry, title){
+//   var newEntry = new Entry(title, entry);
+//   newEntry.forEach(function(element) {
+//     console.log(element);
+//   });
+// });
